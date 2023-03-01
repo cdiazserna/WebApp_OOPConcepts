@@ -109,6 +109,17 @@ namespace WebApp_OOPConcepts
                 Console.WriteLine(baseCommissionEmployee);
                 Console.WriteLine("");
 
+                Invoice invoice = new Invoice()
+                {
+                    Id = 5050,
+                    Description = "200 de cilantro",
+                    Quantity = 100,
+                    Price = 200
+                };
+
+                Console.WriteLine(invoice);
+                Console.WriteLine("");
+
             }
             catch (Exception message)
             {
