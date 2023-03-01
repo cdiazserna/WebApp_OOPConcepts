@@ -27,6 +27,7 @@ namespace WebApp_OOPConcepts
 
                 var dateObject = new Date(year, month, day);
                 Console.WriteLine("The date entered is: " + dateObject);
+                Console.WriteLine("");
 
                 Employee salaryEmployee = new SalaryEmployee()
                 {
@@ -40,6 +41,21 @@ namespace WebApp_OOPConcepts
                 };
 
                 Console.WriteLine(salaryEmployee);
+                Console.WriteLine("");
+
+                Employee commissionEmployee = new CommissionEmployee()
+                {
+                    Id = 1,
+                    FirstName = "Julio",
+                    LastName = "Pérez",
+                    BirthDate = dateObject,
+                    HiringDate = dateObject,
+                    IsActive = false,
+                    CommissionPercentage = 5,
+                    Sales = 20000000
+                };
+
+                Console.WriteLine(commissionEmployee);
 
             }
             catch (Exception message)
