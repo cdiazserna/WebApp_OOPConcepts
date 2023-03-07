@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using WebApp_OOPConcepts.Helpers;
 
 namespace WebApp_OOPConcepts
 {
@@ -37,7 +38,7 @@ namespace WebApp_OOPConcepts
                     Salary = 1160000
                 };
 
-                Console.WriteLine(salaryEmployee);
+                //Console.WriteLine(salaryEmployee);
                 Console.WriteLine("");
 
                 Employee commissionEmployee = new CommissionEmployee()
@@ -52,7 +53,7 @@ namespace WebApp_OOPConcepts
                     Sales = 20000000
                 };
 
-                Console.WriteLine(commissionEmployee);
+                //Console.WriteLine(commissionEmployee);
                 Console.WriteLine("");
 
                 Console.Write("Please type the ID: ");
@@ -91,7 +92,7 @@ namespace WebApp_OOPConcepts
                     HourValue = hourValue
                 };
 
-                Console.WriteLine(hourlyEmployee);
+                //Console.WriteLine(hourlyEmployee);
                 Console.WriteLine("");
 
                 Employee baseCommissionEmployee = new BaseCommissionEmployee()
@@ -107,8 +108,14 @@ namespace WebApp_OOPConcepts
                     Base = 5000000
                 };
 
-                Console.WriteLine(baseCommissionEmployee);
-                Console.WriteLine("");
+                //Console.WriteLine(baseCommissionEmployee);
+                Console.WriteLine(" ");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee,
+                    hourlyEmployee, baseCommissionEmployee);
+
+                Console.WriteLine($"Total Payroll:........{employeeHelper.GetPayrollFromActiveEmployees():C2}");
+                Console.WriteLine(" ");
 
                 Invoice invoice = new Invoice()
                 {
@@ -119,7 +126,7 @@ namespace WebApp_OOPConcepts
                 };
 
                 Console.WriteLine(invoice);
-                Console.WriteLine("");
+                Console.WriteLine(" ");
 
             }
             catch (Exception message)
